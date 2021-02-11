@@ -5,7 +5,7 @@
 	using System.ComponentModel.DataAnnotations.Schema;
 
 
-	public class Product
+	public class Product : IEntity
 	{
 		public int Id { get; set; }
 
@@ -33,6 +33,8 @@
 		//[Column(TypeName = "decimal(18,2)")]
 		[DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
 		public double Stock { get; set; }
-	}
+
+        public User User { get; set; }
+    }
 
 }
